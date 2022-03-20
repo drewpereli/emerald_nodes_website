@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#mobile-nav {
+  transform: translateY(-100%);
+}
+
+#mobile-nav.open {
+  transform: translateY(0);
+}

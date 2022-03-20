@@ -1,29 +1,43 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const purgecss = require('@fullhuman/postcss-purgecss');
+
+const pages = [
+  'index',
+  'get-started',
+  'whitepaper',
+  'who-is-emerald',
+  'community',
+  'contact',
+];
 
 module.exports = {
-  entry: './index.js',
+  entry: './index.ts',
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].[contenthash].js',
     clean: true,
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.pug',
-      filename: 'index.html',
+    ...pages.map((page) => {
+      return new HtmlWebpackPlugin({
+        template: `./src/pages/${page}.pug`,
+        filename: `${page}.html`,
+      });
     }),
-    new HtmlWebpackPlugin({
-      template: './src/about.pug',
-      filename: 'about.html',
-    }),
+
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
   ],
   module: {
     rules: [
+      {
+        test: /\.ts$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
       {
         test: /\.pug$/,
         use: ['pug-loader'],
@@ -37,7 +51,15 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: ['tailwindcss', 'autoprefixer'],
+                plugins: [
+                  'tailwindcss',
+                  purgecss({
+                    content: ['./src/**/*.pug'],
+                    defaultExtractor: (content) =>
+                      content.match(/[\w-:/]+(?<!:)/g) || [],
+                  }),
+                  'autoprefixer',
+                ],
               },
             },
           },
