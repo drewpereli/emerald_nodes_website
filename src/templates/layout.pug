@@ -29,6 +29,10 @@ html.text-slate-900.tracking-wider(lang="en")
           a.uppercase.font-medium.cursor-pointer.transition-colors(class="hover:text-indigo-600" href=page.route)= page.label
 
     #content.min-h-screen
-      block content
+      .flex.items-center.justify-center.text-2xl#countdown-timer
+      
+      .mt-8.text-6xl
+        block content
+      
       .bg-slate-900.text-slate-300.px-4.py-8
         .text-center.font-light Emerald Nodes
