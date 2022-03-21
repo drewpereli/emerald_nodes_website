@@ -4,5 +4,5 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
-  plugins: [new FaviconsWebpackPlugin('./src/images/logo.png')],
+  plugins: [new FaviconsWebpackPlugin('./src/images/favicon.png')],
 });

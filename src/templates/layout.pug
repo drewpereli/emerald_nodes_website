@@ -1,5 +1,5 @@
 doctype html
-html.text-slate-900.tracking-wider(lang="en")
+html.text-slate-900.bg-black-off.tracking-wider(lang="en")
   head
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -8,31 +8,34 @@ html.text-slate-900.tracking-wider(lang="en")
     title Emerald Nodes
 
   body
-    .px-8.py-4.flex.items-center.justify-between
-      span.text-4xl.font-black.text-indigo-600 GC:
-      -
-        var pages = [
-          {label: "Home", route: "/"},
-          {label: "Get Started", route: "/get-started.html"},
-          {label: "Whitepaper", route: "/whitepaper.html"},
-          {label: "Who Is Emerald", route: "/who-is-emerald.html"},
-          {label: "Community", route: "/community.html"},
-          {label: "Contact/Support", route: "/contact.html"},
-        ]
-      button#open-mobile-nav-btn.text-4xl(type='button')(class="md:hidden" aria-label="open navigation menu")
-        i.fas.fa-bars
-      nav#mobile-nav.clickable-nav.absolute.top-0.left-0.w-full.bg-black.bg-opacity-90.text-white.transition-transform.duration-500
-        each page in pages
-          a.h-16.w-full.flex.items-center.justify-center.uppercase.font-medium(href=page.route)= page.label
-      .clickable-nav.hidden(class="md:flex md:items-center md:ml-auto md:space-x-16")
-        each page in pages
-          a.uppercase.font-medium.cursor-pointer.transition-colors(class="hover:text-indigo-600" href=page.route)= page.label
+    .px-12
+      .py-4.flex.items-center.justify-between.h-48.border-b-2(class="border-white-off/50")
+        a.space-x-4.flex.items-center(href="/")
+          img(src=require('../images/logo-small.png') height="100" width="100")
+          span.text-xl.font-bold.text-secondary-300 EMERALD NODES
+        -
+          var pages = [
+            {label: "Get Started", route: "/get-started.html"},
+            {label: "Whitepaper", route: "/whitepaper.html"},
+            {label: "Who Is Emerald", route: "/who-is-emerald.html"},
+            {label: "Community", route: "/community.html"},
+            {label: "Contact|Support", route: "/contact.html"},
+          ]
+        .self-end
+          button#open-mobile-nav-btn.text-4xl(type='button')(class="md:hidden" aria-label="open navigation menu")
+            i.fas.fa-bars
+          nav#mobile-nav.absolute.top-0.left-0.w-full.bg-black.bg-opacity-90.text-white.transition-transform.duration-500
+            each page in pages
+              a.h-16.w-full.flex.items-center.justify-center.uppercase.font-medium(href=page.route)= page.label
+          .hidden.text-lg(class="md:flex md:items-center md:ml-auto md:space-x-12 text-white-off/50")
+            each page in pages
+              a.uppercase.cursor-pointer.transition-colors(class="hover:underline" href=page.route)= page.label
 
     #content.min-h-screen
-      .flex.items-center.justify-center.text-2xl#countdown-timer
+      //- .flex.items-center.justify-center.text-2xl#countdown-timer
       
-      .mt-8.text-6xl
-        block content
+      block content
       
-      .bg-slate-900.text-slate-300.px-4.py-8
-        .text-center.font-light Emerald Nodes
+      .mt-32.px-4.py-8.flex.justify-around.h-64(class="bg-primary-500/70")
+        each word in ['copyright', 'date', 'social buttons', 'contact info']
+          span.uppercase.text-lg.tracking-wide(class="text-white-off/30")= word
