@@ -1,7 +1,11 @@
 extends ../templates/layout.pug
 
+include ../components/countdown-timer
+
 block content
-  .bg-logo-big.w-full.bg-cover(style="height: 32rem; background-position: center 40%;")
+  .bg-logo-big.w-full.bg-cover.flex.items-center.justify-center(style="height: 32rem; background-position: center 40%;")
+    +countdown-timer
+  
   .mt-8.flex.items-center.px-12.space-x-12
     .bg-secondary-500.p-12.rounded.border.space-y-4(class="border-white-off/50 w-5/6" data-aos="fade-right")
       .text-3xl.font-bold.uppercase.text-white-off Vision
