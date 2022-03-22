@@ -10,3 +10,7 @@
 #mobile-nav.open {
   transform: translateY(0);
 }
+
+.inline-svg > svg {
+  @apply h-full;
+}

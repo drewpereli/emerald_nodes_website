@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.49 198.59">
+  <defs>
+    <style>
+      .b {
+        fill: none;
+        stroke: currentColor;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <polyline class="b" points=".48 198.47 25.97 98.9 .48 .12" />
+</svg>

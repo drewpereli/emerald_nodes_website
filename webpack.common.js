@@ -66,7 +66,11 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.svg$/,
+        use: 'svg-inline-loader?classPrefix',
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
     ],
@@ -85,5 +89,8 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js'],
+    alias: {
+      Images: path.resolve(__dirname, './src/images/'),
+    },
   },
 };
