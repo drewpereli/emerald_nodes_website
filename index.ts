@@ -2,6 +2,9 @@ import './src/styles/app.css';
 import '@fortawesome/fontawesome-free/css/fontawesome.css';
 import '@fortawesome/fontawesome-free/css/solid.css';
 import '@fortawesome/fontawesome-free/css/brands.css';
+import * as AOS from 'aos';
+
+AOS.init({ duration: 800 });
 
 const openMobileNavBtn = document.getElementById('open-mobile-nav-btn');
 const mobileNav = document.getElementById('mobile-nav');

@@ -3,14 +3,14 @@ extends ../templates/layout.pug
 block content
   .bg-logo-big.w-full.bg-cover(style="height: 32rem; background-position: center 40%;")
   .mt-8.flex.items-center.px-12.space-x-12
-    .bg-secondary-500.p-12.rounded.border.space-y-4(class="border-white-off/50 w-5/6")
+    .bg-secondary-500.p-12.rounded.border.space-y-4(class="border-white-off/50 w-5/6" data-aos="fade-right")
       .text-3xl.font-bold.uppercase.text-white-off Vision
       ul.list-disc.pl-4.space-y-4(class="text-white-off/50")
         li We enable our users to start earning regular awards immediately by setting up a node on the Avalanche (AVAX) network with the few clicks of a button.
         li Emerald Nodes aims to serve as a core pillar of the groundbreaking AVAX network by incentivising the creation of nodes...
-    .bg-logo-big.h-96.flex-grow.bg-bottom(style="background-size: 500%; border-radius: 40px;")
+    .bg-logo-big.h-96.flex-grow.bg-bottom(style="background-size: 500%; border-radius: 40px;" data-aos="fade-left")
 
-  .mt-8.px-16.py-8.flex.items-center.space-x-12(class="bg-white-off/50")
+  .mt-8.px-16.py-8.flex.items-center.space-x-12(class="bg-white-off/50" data-aos="fade-up")
     .bg-logo-big.flex-grow.bg-bottom.h-64(style="background-size: 250%; border-radius: 40px;")
     .space-y-4.text-secondary-500.border-b.border-secondary-500.pb-8(class="w-5/6")
       .text-3xl.font-bold.italic What is Emerald?
@@ -19,10 +19,10 @@ block content
         li Emerald Nodes aims to serve as a core pillar of the groundbreaking AVAX network by incentivising the creation of nodes...
 
   .mt-8.flex.items-center.space-x-16
-    .space-y-4(class="w-1/2")
+    .space-y-4(class="w-1/2" data-aos="fade-right")
       each val in [null, null]
         .bg-secondary-500.px-16.py-8.text-3xl.uppercase.rounded-lg.border.tracking-widest.font-light(class="text-white-off/30 border-white-off/30") How it works
-    .px-8.py-16.rounded.border(class="w-1/2 border-white-off/50 bg-primary-500/70")
+    .px-8.py-16.rounded.border(class="w-1/2 border-white-off/50 bg-primary-500/70" data-aos="fade-left")
       .font-bold.text-3xl.uppercase.text-white-off.border-t.border-white-off.pt-1 How to Buy
       .mt-4.text-primary-300.text-xl
         div Process Blurb:
@@ -34,7 +34,7 @@ block content
         button.bg-white-off.px-4.border-2.border-primary-500.font-bold.text-xl.text-primary-500.rounded-lg START HERE
 
   .mt-8.flex.items-center.space-x-16
-    .ml-8.p-8.pb-16.bg-secondary-500.rounded.border(class="w-1/2 border-white-off/70")
+    .ml-8.p-8.pb-16.bg-secondary-500.rounded.border(class="w-1/2 border-white-off/70" data-aos="fade-right")
       .tracking-widest.font-light.text-3xl.uppercase.text-white-off How it Works
       .mt-8.text-primary-300.text-lg
         div Invest in a node → yield rewards immediately
@@ -52,7 +52,7 @@ block content
         div AVAX expanding
         div Accessible
         div We handle all the hand parts
-    .text-primary-300.p-8.rounded.border(class="w-1/2 bg-primary-500/20 border-white-off/40")
+    .text-primary-300.p-8.rounded.border(class="w-1/2 bg-primary-500/20 border-white-off/40" data-aos="fade-left")
       .text-3xl.font-bold.italic What is Emerald?
       .ml-16
         div Process Blurb:
