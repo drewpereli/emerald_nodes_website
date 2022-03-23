@@ -4,6 +4,9 @@ include ../components/countdown-timer
 include ../components/inline-svg
 include ../components/button
 include ../components/header
+include ../components/block-1
+include ../components/block-2
+include ../components/block-3
 
 block content
   .bg-logo-big.w-full.bg-cover.flex.items-center.justify-center(style="height: 32rem; background-position: center 40%;")
@@ -11,7 +14,7 @@ block content
       +countdown-timer
   
   .mt-8.flex.items-center.justify-center.px-8.space-x-12
-    .bg-secondary-500.p-12.rounded.border.space-y-4.w-full.max-w-4xl(class="border-white-off/50" data-aos="fade-right")
+    +block-1.w-full.max-w-4xl.space-y-4(data-aos="fade-right")
       .text-3xl.font-bold.uppercase.text-white-off Vision
       ul.list-disc.pl-4.space-y-4(class="text-white-off/50")
         li We enable our users to start earning regular awards immediately by setting up a node on the Avalanche (AVAX) network with the few clicks of a button.
@@ -34,7 +37,7 @@ block content
 
   .mt-8.flex.flex-col.px-8(class="md:flex-row md:items-stretch md:space-x-8")
 
-    .p-8.pb-16.bg-secondary-500.rounded.border(class="md:w-1/2 border-white-off/70" data-aos="fade-left")
+    +block-1(class="md:w-1/2" data-aos="fade-left")
       +header.text-white-off.italic What is Emerald?
       .mt-4.text-primary-300.text-lg
         div Invest in a node → yield rewards immediately
@@ -54,7 +57,7 @@ block content
         div We handle all the hand parts
   
     .flex.flex-col.space-y-8.mt-8(class="md:w-1/2 md:mt-0")
-      .p-8.rounded.border.text-white-off.grow(class="border-white-off/50 bg-primary-500/70" data-aos="fade-right")
+      +block-2.grow(data-aos="fade-right")
         +header.italic Why is it different
         .mt-4.text-xl
           div Process Blurb:
@@ -63,7 +66,7 @@ block content
           div Buy node
           div Border
   
-      .text-secondary-500.p-8.rounded.border.border-primary-500.space-y-4.grow(class="bg-white-off/50" data-aos="fade-left")
+      +block-3.grow(data-aos="fade-left")
         +header.flex.justify-between.items-center What is Emerald?
           +inline-svg('chevron-triple').h-12.my-2
         .pl-2.flex.items-start.space-x-4
