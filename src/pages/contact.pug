@@ -2,11 +2,15 @@ extends ../templates/layout.pug
 
 include ../components/input
 include ../components/button
+include ../components/block-1
+include ../components/header
 
 block content
-  .px-8
-    .text-center.w-full.max-w-xl.mx-auto.mt-8
-      form#contact-form.w-full
+  .px-8.w-full.max-w-3xl.mx-auto.mt-8
+
+    +block-1
+      +header Get in touch
+      form#contact-form.w-full.mt-4
         +input({id: 'name-input', label: 'name', name: 'name'})
         +input({id: 'email-input', label: 'email', name: 'email', type: 'email', required: true}).mt-4
         +input({id: 'message-input', label: 'message', name: 'message', type: 'textarea', required: true}).mt-4
