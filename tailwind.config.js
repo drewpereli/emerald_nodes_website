@@ -2,6 +2,7 @@ const imagesPath = '../images'; // Relative to ./src/styles/app.css
 
 module.exports = {
   content: ['./src/**/*.pug'],
+  safelist: ['pb-4'],
   theme: {
     extend: {
       colors: {
