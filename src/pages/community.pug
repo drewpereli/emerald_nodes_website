@@ -1,4 +1,36 @@
 extends ../templates/layout.pug
 
+include ../components/header
+include ../components/block-1
+include ../components/block-2
+include ../components/block-3
+include ../components/button
+
 block content
-  div community
+  .px-8.mt-8.w-full.max-w-6xl.mx-auto(class="md:flex md:space-x-8")
+    +block-2
+      +header Our Community
+      .mt-4
+        .text-xl.flex.items-center.space-x-4(class="text-white-off/70")
+          .uppercase.font-medium Discord
+          i.fab.fa-discord
+        .mt-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque accusamus mollitia earum voluptatibus necessitatibus impedit, veritatis ratione optio architecto aspernatur hic sapiente modi, error accusantium in amet, aliquid quae vero?
+      .mt-8
+        .text-xl.flex.items-center.space-x-4(class="text-white-off/70")
+          .uppercase.font-medium Twitter
+          i.fab.fa-twitter
+        .mt-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque accusamus mollitia earum voluptatibus necessitatibus impedit, veritatis ratione optio architecto aspernatur hic sapiente modi, error accusantium in amet, aliquid quae vero?
+
+    +block-1.mt-8(class="md:mt-0")
+      +header Our Apps
+      .mt-4
+        .text-xl.flex.items-center.space-x-4(class="text-white-off/70")
+          .uppercase.font-medium Our Webapps
+        .mt-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque accusamus mollitia earum voluptatibus necessitatibus impedit, veritatis ratione optio architecto aspernatur hic sapiente modi, error accusantium in amet, aliquid quae vero?
+        +button.mt-4.w-full.py-2.shadow-lg Webapp
+
+      .mt-8
+        .text-xl.flex.items-center.space-x-4(class="text-white-off/70")
+          .uppercase.font-medium Token Swap Site
+        .mt-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque accusamus mollitia earum voluptatibus necessitatibus impedit, veritatis ratione optio architecto aspernatur hic sapiente modi, error accusantium in amet, aliquid quae vero?
+        +button.mt-4.w-full.py-2.shadow-lg Swap Site
