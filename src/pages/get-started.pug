@@ -1,4 +1,39 @@
 extends ../templates/layout.pug
 
+include ../components/header
+include ../components/block-1
+include ../components/block-2
+include ../components/block-3
+include ../components/button
+
+
 block content
-  div get started
+  .px-8.mt-8
+    +block-2.text-white-off
+      +header Summary Blurb
+      .mt-4.
+        Text description Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, in soluta, repellat eius recusandae non expedita dolorem accusantium placeat obcaecati natus cupiditate eos unde aliquam laudantium ipsa dolore libero saepe.
+
+    .flex.flex-col(class="md:flex-row md:space-x-8")
+      +block-1.mt-8(class="md:w-1/2")
+        +header Get Started
+        .space-y-8.divide-y(class="divide-white-off/50")
+          .space-y-4.pt-4
+            .font-bold Step 1
+            div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure error eligendi enim consequatur quaerat voluptatem alias provident quasi aliquam! Repellendus quod deleniti reiciendis sint hic voluptatem, inventore tenetur nisi.
+          .space-y-4.pt-4
+            .font-bold Step 2
+            div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure error eligendi enim consequatur quaerat voluptatem alias provident quasi aliquam! Repellendus quod deleniti reiciendis sint hic voluptatem, inventore tenetur nisi.
+          .space-y-4.pt-4
+            .font-bold Step 3
+            div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure error eligendi enim consequatur quaerat voluptatem alias provident quasi aliquam! Repellendus quod deleniti reiciendis sint hic voluptatem, inventore tenetur nisi.
+          .space-y-4.pt-4
+            .font-bold Step 4
+            div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure error eligendi enim consequatur quaerat voluptatem alias provident quasi aliquam! Repellendus quod deleniti reiciendis sint hic voluptatem, inventore tenetur nisi.
+        .mt-12.flex.justify-center
+          +button.w-full.max-w-2xl.shadow-lg.py-2 Webapp
+
+      +block-3.mt-8(class="md:w-1/2")
+        +header Manage Nodes
+        .mt-4.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, nemo temporibus ad quo non nisi accusantium rem laboriosam voluptatum, praesentium beatae. Ad culpa delectus aspernatur? Hic consequatur deserunt dolores tempore?
