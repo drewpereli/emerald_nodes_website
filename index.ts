@@ -5,9 +5,12 @@ import '@fortawesome/fontawesome-free/css/brands.css';
 import * as AOS from 'aos';
 import setupMobileNav from './src/scripts/mobile-nav';
 import startCountdownTimer from './src/scripts/countdown-timer';
+import setupContactForm from './src/scripts/contact-form';
 
 AOS.init({ duration: 800 });
 
 setupMobileNav();
 
 startCountdownTimer();
+
+setupContactForm();

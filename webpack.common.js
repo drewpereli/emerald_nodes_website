@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const purgecss = require('@fullhuman/postcss-purgecss');
+const Dotenv = require('dotenv-webpack');
 
 const pages = [
   'index',
@@ -30,6 +31,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
+
+    new Dotenv(),
   ],
   module: {
     rules: [
@@ -57,6 +60,7 @@ module.exports = {
                     content: ['./src/**/*.pug'],
                     defaultExtractor: (content) =>
                       content.match(/[\w-:/]+(?<!:)/g) || [],
+                    safelist: [/btn-in-progress/],
                   }),
                   'autoprefixer',
                 ],
