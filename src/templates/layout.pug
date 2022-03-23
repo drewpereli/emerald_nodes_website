@@ -1,7 +1,7 @@
 include ../components/inline-svg
 
 doctype html
-html.text-slate-900.bg-black-off.tracking-wider(lang="en")
+html.h-full.bg-black-off.tracking-wider(lang="en")
   head
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -9,8 +9,8 @@ html.text-slate-900.bg-black-off.tracking-wider(lang="en")
     meta(name='description', content='Emerald Nodes')
     title Emerald Nodes
 
-  body
-    .px-12
+  body.h-full.flex.flex-col
+    .px-12.shrink-0
       .py-4.flex.items-center.justify-between.h-48.border-b-2(class="border-white-off/50")
         a.space-x-4.flex.items-center(href="/")
           img(src=require('Images/logo-small.png') height="100" width="100")
@@ -37,11 +37,9 @@ html.text-slate-900.bg-black-off.tracking-wider(lang="en")
             each page in pages
               a.uppercase.cursor-pointer.transition-colors(class="hover:underline" href=page.route)= page.label
 
-    #content.min-h-screen
-      //- .flex.items-center.justify-center.text-2xl#countdown-timer
-      
+    #content.grow.shrink-0.basis-auto
       block content
       
-      .mt-32.px-4.py-8.flex.justify-around.h-64(class="bg-primary-500/70")
-        each word in ['copyright', 'date', 'social buttons', 'contact info']
-          span.uppercase.text-lg.tracking-wide(class="text-white-off/30")= word
+    .mt-32.h-32.px-4.py-8.flex.justify-around.shrink-0(class="bg-primary-500/70")
+      each word in ['copyright', 'date', 'social buttons', 'contact info']
+        span.uppercase.text-lg.tracking-wide(class="text-white-off/30")= word
