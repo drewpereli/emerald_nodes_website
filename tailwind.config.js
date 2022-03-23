@@ -23,6 +23,9 @@ module.exports = {
       backgroundImage: {
         'logo-big': `url('${imagesPath}/logo-big.png')`,
       },
+      fontFamily: {
+        body: ['arial', 'sans-serif'],
+      },
     },
   },
   plugins: [],
