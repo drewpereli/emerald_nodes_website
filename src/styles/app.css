@@ -14,3 +14,25 @@
 .inline-svg > svg {
   @apply h-full;
 }
+
+.input-field {
+  @apply w-full max-w-full border border-white-off/50 p-1 rounded focus:outline-none;
+}
+
+.btn-in-progress:before {
+  content: '•';
+  position: absolute;
+  font-size: 1.2rem;
+  transform: translateX(-1em) translateY(-0.075em);
+  animation: loading-bounce 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes loading-bounce {
+  from {
+    transform: translateX(-1em) translateY(-0.075em);
+  }
+
+  to {
+    transform: translateX(-1.8em) translateY(-0.075em);
+  }
+}
