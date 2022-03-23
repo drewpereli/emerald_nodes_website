@@ -1,4 +1,28 @@
 extends ../templates/layout.pug
 
+include ../components/header
+include ../components/block-1
+
 block content
-  div who is emerald
+  .px-8.mt-8
+    +block-1
+      +header Our Team
+      .mt-4.space-y-8(class="md:flex md:space-y-0 md:space-x-16")
+        .space-y-4
+          .flex.items-center
+            .uppercase.text-xl Baxter
+            .ml-1.whitespace-nowrap(class="text-white-off/50") | Founder
+          img.w-full(src=require('Images/baxter.jpg'))
+          .text-sm.italic Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente iusto ex cumque eveniet temporibus laudantium, ducimus ea expedita ab alias error commodi voluptatibus quasi magnam atque ratione vel sed optio.
+        .space-y-4
+          .flex.items-center
+            .uppercase.text-xl Shane
+            .ml-1.whitespace-nowrap(class="text-white-off/50") | Founder
+          img.w-full(src=require('Images/shane.png'))
+          .text-sm.italic Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente iusto ex cumque eveniet temporibus laudantium, ducimus ea expedita ab alias error commodi voluptatibus quasi magnam atque ratione vel sed optio.
+        .space-y-4
+          .flex.items-center.flex-wrap
+            .uppercase.text-xl Winjit
+            .ml-1.whitespace-nowrap(class="text-white-off/50") | Blockchain Developer
+          img.w-full(src=require('Images/winjit.png'))
+          .text-sm.italic Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente iusto ex cumque eveniet temporibus laudantium, ducimus ea expedita ab alias error commodi voluptatibus quasi magnam atque ratione vel sed optio.
