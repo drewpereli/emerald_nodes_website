@@ -4,13 +4,14 @@ include ../components/input
 include ../components/button
 
 block content
-  .text-center.w-full.max-w-xl.mx-auto.mt-8
-    form#contact-form.w-full
-      +input({id: 'name-input', label: 'name', name: 'name'})
-      +input({id: 'email-input', label: 'email', name: 'email', type: 'email', required: true}).mt-4
-      +input({id: 'message-input', label: 'message', name: 'message', type: 'textarea', required: true}).mt-4
-      .flex.justify-between.mt-4
-        .flex.items-center.text-sm.relative.flex-grow
-          #email-form-success-message.text-green-500.absolute.w-full.h-full.flex.items-center.hidden Your message was sent!
-          #email-form-error-message.text-red-500.absolute.w-full.h-full.flex.items-center.hidden There was an error. Please try again later.
-        +button#email-form-submit-btn(type='submit') Submit
+  .px-8
+    .text-center.w-full.max-w-xl.mx-auto.mt-8
+      form#contact-form.w-full
+        +input({id: 'name-input', label: 'name', name: 'name'})
+        +input({id: 'email-input', label: 'email', name: 'email', type: 'email', required: true}).mt-4
+        +input({id: 'message-input', label: 'message', name: 'message', type: 'textarea', required: true}).mt-4
+        .flex.justify-between.mt-4
+          .flex.items-center.text-sm.relative.flex-grow
+            #email-form-success-message.text-green-500.absolute.w-full.h-full.flex.items-center.hidden Your message was sent!
+            #email-form-error-message.text-red-500.absolute.w-full.h-full.flex.items-center.hidden There was an error. Please try again later.
+          +button#email-form-submit-btn.px-8.py-2(type='submit') Submit
