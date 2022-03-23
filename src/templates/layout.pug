@@ -1,7 +1,7 @@
 include ../components/inline-svg
 
 doctype html
-html.h-full.bg-black-off.font-body.tracking-wider(lang="en")
+html.h-full.bg-black-off.font-body.tracking-wider.overflow-x-hidden(lang="en")
   head
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -10,10 +10,10 @@ html.h-full.bg-black-off.font-body.tracking-wider(lang="en")
     title Emerald Nodes
 
   body.h-full.flex.flex-col
-    .px-12.shrink-0
-      .py-4.flex.items-center.justify-between.h-48.border-b-2(class="border-white-off/50")
-        a.space-x-4.flex.items-center(href="/")
-          img(src=require('Images/logo-small.png') height="100" width="100")
+    .shrink-0(class="md:px-12")
+      .p-4.flex.items-center.justify-between.h-48.border-b-2(class="border-white-off/50")
+        a.space-x-4.flex.items-center(class="md:space-x-8" href="/")
+          img(src=require('Images/logo-small.png') style="height: 100px;")
           .flex.text-secondary-300.space-x-2
             +inline-svg('chevron-triple').h-8.rotate-180
             span.text-xl.font-bold.mt-2 EMERALD NODES
@@ -27,10 +27,10 @@ html.h-full.bg-black-off.font-body.tracking-wider(lang="en")
             {label: "Community", route: "/community.html"},
             {label: "Contact|Support", route: "/contact.html"},
           ]
-        .self-end
-          button#open-mobile-nav-btn.text-4xl(type='button')(class="md:hidden" aria-label="open navigation menu")
+        div(class="md:self-end")
+          button#open-mobile-nav-btn.text-4xl.text-white-off(type='button')(class="md:hidden" aria-label="open navigation menu")
             i.fas.fa-bars
-          nav#mobile-nav.absolute.top-0.left-0.w-full.bg-black.bg-opacity-90.text-white.transition-transform.duration-500
+          nav#mobile-nav.absolute.top-0.left-0.w-full.bg-black-off.bg-opacity-90.text-white-off.transition-transform.duration-500
             each page in pages
               a.h-16.w-full.flex.items-center.justify-center.uppercase.font-medium(href=page.route)= page.label
           .hidden.text-lg(class="md:flex md:items-center md:ml-auto md:space-x-12 text-white-off/50")

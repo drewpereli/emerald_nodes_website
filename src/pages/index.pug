@@ -2,51 +2,41 @@ extends ../templates/layout.pug
 
 include ../components/countdown-timer
 include ../components/inline-svg
+include ../components/button
+include ../components/header
 
 block content
   .bg-logo-big.w-full.bg-cover.flex.items-center.justify-center(style="height: 32rem; background-position: center 40%;")
-    +countdown-timer
+    .hidden(class="md:block")
+      +countdown-timer
   
-  .mt-8.flex.items-center.px-12.space-x-12
-    .bg-secondary-500.p-12.rounded.border.space-y-4(class="border-white-off/50 w-5/6" data-aos="fade-right")
+  .mt-8.flex.items-center.justify-center.px-8.space-x-12
+    .bg-secondary-500.p-12.rounded.border.space-y-4.w-full.max-w-4xl(class="border-white-off/50" data-aos="fade-right")
       .text-3xl.font-bold.uppercase.text-white-off Vision
       ul.list-disc.pl-4.space-y-4(class="text-white-off/50")
         li We enable our users to start earning regular awards immediately by setting up a node on the Avalanche (AVAX) network with the few clicks of a button.
         li Emerald Nodes aims to serve as a core pillar of the groundbreaking AVAX network by incentivising the creation of nodes...
-    .bg-logo-big.h-96.flex-grow.bg-bottom(style="background-size: 500%; border-radius: 40px;" data-aos="fade-left")
 
-  .mt-8.px-16.py-8.flex.items-center.space-x-12(class="bg-white-off/50" data-aos="fade-up")
-    .bg-logo-big.flex-grow.bg-bottom.h-64(style="background-size: 250%; border-radius: 40px;")
-    .space-y-4.text-secondary-500.border-b.border-secondary-500.pb-8.grow-0(class="w-5/6")
-      .text-3xl.font-bold.italic What is Emerald?
+  .mt-8.px-16.py-8.flex.items-center(class="bg-white-off/50 md:space-x-12" data-aos="fade-up")
+    .bg-logo-big.bg-cover.bg-no-repeat.flex-grow.bg-bottom.hidden.self-stretch(class="md:block" style="border-radius: 40px;")
+    .space-y-4.text-secondary-500.border-b.border-secondary-500.pb-8.grow-0.w-full(class="md:w-5/6")
+      .text-3xl.font-bold.italic Get Started
       .flex.items-center
-        +inline-svg('chevron').h-48
+        +inline-svg('chevron').h-48.hidden(class="md:block")
 
-        ul.list-disc.pl-4.space-y-4.text-xl.ml-8
-          li We enable our users to start earning regular awards immediately by setting up a node on the Avalanche (AVAX) network with the few clicks of a button.
-          li Emerald Nodes aims to serve as a core pillar of the groundbreaking AVAX network by incentivising the creation of nodes...
+        .space-y-16
+          ul.list-disc.pl-4.space-y-4.text-xl.ml-8
+            li We enable our users to start earning regular awards immediately by setting up a node on the Avalanche (AVAX) network with the few clicks of a button.
+            li Emerald Nodes aims to serve as a core pillar of the groundbreaking AVAX network by incentivising the creation of nodes...
 
-  .mt-8.flex.items-center.space-x-16
-    .space-y-4(class="w-1/2" data-aos="fade-right")
-      each val in [null, null]
-        .bg-secondary-500.p-8.text-3xl.uppercase.rounded-r-lg.border-r.border-y.tracking-widest.font-light.flex.items-center.space-x-4(class="text-white-off/30 border-white-off/30") 
-          +inline-svg('chevron-triple').h-8
-          span How it works
-    .px-8.py-16.rounded.border(class="w-1/2 border-white-off/50 bg-primary-500/70" data-aos="fade-left")
-      .font-bold.text-3xl.uppercase.text-white-off.border-t.border-white-off.pt-1 How to Buy
-      .mt-4.text-primary-300.text-xl
-        div Process Blurb:
-        div Buy avax
-        div Buy emerald
-        div Buy node
-        div Border
-      .mt-32.flex.justify-center
-        button.bg-white-off.px-4.border-2.border-primary-500.font-bold.text-xl.text-primary-500.rounded-lg START HERE
+          .flex.justify-center
+            +button.w-full.max-w-2xl.py-8.text-2xl.shadow-xl.uppercase.font-black Get Started
 
-  .mt-8.flex.items-center.space-x-16
-    .ml-8.p-8.pb-16.bg-secondary-500.rounded.border(class="w-1/2 border-white-off/70" data-aos="fade-right")
-      .tracking-widest.font-light.text-3xl.uppercase.text-white-off How it Works
-      .mt-8.text-primary-300.text-lg
+  .mt-8.flex.flex-col.px-8(class="md:flex-row md:items-stretch md:space-x-8")
+
+    .p-8.pb-16.bg-secondary-500.rounded.border(class="md:w-1/2 border-white-off/70" data-aos="fade-left")
+      +header.text-white-off.italic What is Emerald?
+      .mt-4.text-primary-300.text-lg
         div Invest in a node → yield rewards immediately
         div Spend as much or as little as you want
         div $20 @launch
@@ -62,11 +52,27 @@ block content
         div AVAX expanding
         div Accessible
         div We handle all the hand parts
-    .text-primary-300.p-8.rounded.border.space-y-4(class="w-1/2 bg-primary-500/20 border-white-off/40" data-aos="fade-left")
-      .text-3xl.font-bold.italic What is Emerald?
-      .pl-2.flex.items-start.space-x-4
-        +inline-svg('chevron-triple').h-8.mt-2
-        div
+  
+    .flex.flex-col.space-y-8.mt-8(class="md:w-1/2 md:mt-0")
+      .p-8.rounded.border.text-white-off.grow(class="border-white-off/50 bg-primary-500/70" data-aos="fade-right")
+        +header.italic Why is it different
+        .mt-4.text-xl
           div Process Blurb:
           div Buy avax
           div Buy emerald
+          div Buy node
+          div Border
+  
+      .text-secondary-500.p-8.rounded.border.border-primary-500.space-y-4.grow(class="bg-white-off/50" data-aos="fade-left")
+        +header.flex.justify-between.items-center What is Emerald?
+          +inline-svg('chevron-triple').h-12.my-2
+        .pl-2.flex.items-start.space-x-4
+          div
+            div Process Blurb:
+            div Buy avax
+            div Buy emerald
+ 
+  .mt-8.px-8
+    .bg-secondary-500.p-8.text-3xl.uppercase.rounded.border.tracking-widest.font-light.flex.items-center.space-x-4.w-full.max-w-6xl.mx-auto(class="text-white-off/70 border-white-off/30" data-aos="fade-up") 
+      +inline-svg('chevron-triple').h-8
+      .uppercase Whitepaper

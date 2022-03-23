@@ -1,6 +1,6 @@
 mixin countdown-timer
-  .countdown-timer.flex.items-center.text-white-off.space-x-8.py-4.px-8.rounded(class="bg-black-off/80")
+  .countdown-timer.flex.items-center.text-white-off.py-4.px-8.rounded-lg.border.border-white-off(class="bg-black-off/80")
     each unit in ['days', 'hours', 'minutes', 'seconds']
-      .w-32.space-y-4
-        .font-bold.text-8xl.text-center.w-full(data-component=unit)
-        .uppercase.text-center= unit
+      .w-40.space-y-4
+        .font-black.text-8xl.text-center.w-full(data-component=unit)
+        .font-bold.uppercase.text-center= unit
