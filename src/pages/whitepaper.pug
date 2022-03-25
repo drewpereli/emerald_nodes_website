@@ -1,4 +1,252 @@
 extends ../templates/layout.pug
 
+include ../components/header
+include ../components/block-1
+
 block content
-  div whitepaper
+  .px-8.mt-8.w-full.max-w-6xl.mx-auto
+    +block-1
+      +header Emerald Nodes Whitepaper
+      .whitepaper
+        h3 Overview
+        p
+          span
+            | Emerald Nodes intends to serve as a pillar supporting the large majority of the
+            | Avalanche (AVAX) network by incentivizing nodes through Nodes as a Service (NaaS). We aim to be the first truly
+            | sustainable NaaS protocol on the Avalanche network.
+        p
+          span
+            | As the daily number of smart contracts deployed on the Avalanche network grows at an
+            | exponential rate, the network will need to rapidly scale its sustainability in terms of its capacity for volume
+            | and traffic. Unfortunately, there is a high barrier of entry and little incentive to run an Avalanche Validator.
+            | Emerald seeks to strengthen the backbone of the network, by adding rewards to running nodes and hosting validators
+            | for our investors making it more user and developer friendly.
+        p
+          span
+            | For now, Emerald nodes will only be available to run on the Avalanche network, though
+            | in the future Emerald nodes will exist on a large multitude of networks.
+        p
+          span
+            | Users will be able to set up a node in seconds with a few clicks of a button, and start
+            | yielding rewards immediately.
+        h3 EMERALD Facts and Definitions
+        ul
+          li
+            span EMERALD: A governance token
+          li
+            span Name: Emerald Nodes
+          li
+            span Symbol: EM
+          li
+            span Emerald Token Contract Address:
+          li
+            span Network: Avalanche
+          li
+            span Decimals: 18
+          li
+            span Original supply: 500,000
+          li
+            span Circulating supply: 175,000
+          li
+            span Supply allocation:
+          li
+            span 50,000 for marketing, developers and the team
+          li
+            span 25,000 allocated to angel investors
+          li
+            span 100,000 circulating/Liquidity (50k at ICO)
+          li
+            span 325,000 in the rewards pool
+          li
+            span Contract address: 0x97E7044ab98B7891546485f5f66EDcc2F58be106
+          li
+            span Token ICO on 2/1
+          li
+            span 0.33 AVAX per token at ICO
+          li
+            span
+              | Taxes: 2.5% buy tax that goes towards liquidity and a 2.5% sell tax that
+              | goes to the treasury.
+        h3 Node Information
+        ul
+          li
+            span
+              | Currently the only type of nodes available will be Nodes as a Service
+              | (NaaS)
+          li
+            span Level of Effort: A few clicks and a few seconds
+          li
+            span Claiming: Every block
+          li
+            span Community Contribution/Cost: 10 EMERALD, 5 EMERALD for tier 5
+          li
+            span
+              | Backing per node: Treasury balance/total supply of nodes= How much the
+              | treasury will pay for your node, the node is then burned.
+          li
+            span
+              | 100% of our validator profit will be put into the node rewards
+              | pool.
+          li
+            span Minimum contribution: 1/4 of a node
+          li
+            span Nodes are transferable
+          li
+            span Auto compounding available
+          li
+            span
+              | Once you purchase a node, the rewards will never change for that
+              | node
+        h3 Tiers and Rewards
+        h4 There are 6 total node tiers (X-5). Each tier pays out different rewards.
+        p
+          span Each node Tier X-4 costs 10 EMERALD, Tier 5 nodes cost 5 EMERALD.
+        p
+          span.italic Note: Yield is measured per 24 hours.
+        h5 Tier X (500 available, 500 reserved for WL members)
+        p
+          span Yields 0.5 EMERALD daily. Cost 10 EMERALD
+        h5 Tier 1 (1,200 available)
+        p
+          span Yields 0.2 EMERALD daily. Cost 10 EMERALD
+        h5 Tier 2 (7,500 available)
+        p
+          span Yields 0.1 EMERALD daily. Cost 10 EMERALD
+        h5 Tier 3 (15,000 available)
+        p
+          span Yields 0.075 EMERALD daily. Cost 9 EMERALD
+        h5 Tier 4 (25,000 available)
+        p
+          span Yields 0.06 EMERALD daily. Cost 8 EMERALD
+        p
+          span Tier 5 &mdash; Costs 5 EMERALD
+        p
+          span Yields 0.025 EMERALD daily. Cost 6 EMERALD
+        p
+          span *NFTs are only applicable to tier 5 nodes.
+
+        h3 Distribution of Node Cost/Contribution
+        ul
+          li
+            span
+              | 20% to node setup and maintenance fees and setup (one time
+              | payment)
+          li
+            span 7.5% for future use
+          li
+            span 7.5% put into treasury
+          li
+            span
+              | 5% distributed to those who add to the AVAX-EMERALD Liquidity pool (not
+              | available at initial node launch)
+          li
+            span 60% into node rewards pool
+          li
+            span Distribution subject to change over time
+        h3 Fees
+        p
+          span
+            | As stated in the overview, Emerald nodes will have considerably lower fees than other
+            | node protocols that exist today. All transaction fees will be negligible (&lt;1 USD, based on the current price of
+            | $AVAX as of January 24th, 2022), and there will be no monthly fees for nodes, nor will there be any additional
+            | fees to claim rewards beyond the minimal network fees.
+        h3 Bonds and Treasury Information
+        p
+          span
+            | $EMERALD will be creating bonds to help generate income and grow the treasury at a slow
+            | and controlled pace. Every time a bond is purchased a new token is minted and the profits are used to grow the
+            | treasury. The treasury consists of a large basket of digital assets. To prevent inflation we are limiting the
+            | number of bonds sold to 1% of the total supply per quarter. The value of the treasury will fluctuate more heavily
+            | as a result of a moving market and variations in asset prices. We plan to stake stablecoins and various other
+            | assets to maximize revenue while limiting the treasury risk exposure.
+        p
+          span The treasury will be available 4&ndash;6 weeks after node launch
+        p
+          span.font-bold The backing per node is calculated as follows:
+        p
+          span Treasury Balance/Total supply of nodes = Backing per Node (BPN)
+        p
+          span
+            | At any point you may opt to sell your node to the treasury for the BPN and your node
+            | will be burned. This will give each node an intrinsic value that it can not fall below. This will help reduce the
+            | total number of nodes, increasing the available rewards for everyone who chooses to hold. This will help maintain
+            | sustainability even in a bear market.
+        h3 Liquidity
+        p
+          span
+            | As stated before, we will reward those who contribute to the AVAX-EMERALD liquidity
+            | pool. 5% of node cost will be redistributed to the contributors of the pool.
+        h3 Whitelist/VIP
+        p
+          span
+            | There are 250 whitelist spots, each member will receive a free random tier node
+            | (1&ndash;5) and have access to purchase 2 tier X nodes (each paying out 0.5 EMERALD per day).
+        p
+          span
+            | There are 50 Emerald list spots, each member will receive exclusive access to airdrops,
+            | and receive a free booster NFT when they are released.
+        p
+          span There are no more available Emerald List or Whitelist spots.
+        h3 Sustainability
+        p
+          span
+            | The node tier system rewards early holders and is designed to create a long runway. The
+            | tier system coupled with the treasury consistently growing from our many streams of revenue creates an extremely
+            | healthy runway. We predict to always have a runway of over 365 days. Avalanche Validators are also much easier and
+            | cheaper to run, allowing us to add a larger percentage of our node profits to the EMERALD rewards pool.
+        h3 NFT Information
+        ul
+          li
+            span
+              | NFT Tokens: Serialized, Bronze, Silver, Gold, and Platinum 3D
+              | tokens
+          li
+            span NFT Supply: Each serialized NFT will have a limited supply
+          li
+            span NFT Contract Address: (not yet minted)
+          li
+            span NFTs are only applicable to tier 5 nodes
+        h3 NFT Boost Figures
+        p
+          span
+            | Note: These numbers are subject to change, and are intended solely to be reference
+            | figures to represent the difference in boost based on an NFT&rsquo;s tier.
+        ul
+          li
+            span
+              | Bronze: 1000 NFTs, Boost rewards by 0.025 EMERALD per day, can be used
+              | on 1 node per wallet. Cost 10 AVAX and 5 EMERALD
+          li
+            span
+              | Silver: 1000 NFTs, boost rewards per node by 0.03 EMERALD per day, Can
+              | be used on 2 nodes per wallet, Cost 50 AVAX and 10 EMERALD
+          li
+            span
+              | Gold: 500 NFTs, Boost rewards per node by 0.05 EMERALD per day, can be
+              | used on 3 nodes per wallet. Cost 125 AVAX and 25 EMERALD
+          li
+            span
+              | Platinum: 50 NFTs, Boost rewards per node by 0.25 EMERALD per day, Can
+              | be used on 6 nodes per wallet. Cost 300 AVAX and 75 EMERALD
+        h3 Streams of Revenue
+        ul
+          li
+            span Bond sales
+          li
+            span NFTs
+          li
+            span Treasury assets staked/reinvested
+          li
+            span Avalanche Validators (~11% APY)
+          li
+            span Emerald merchandise coming soon!
+          li
+            span Node sales
+        h3 Conclusion
+        p
+          span
+            | We hope to bring a long-lasting NaaS protocol to the Avalanche network and improve upon
+            | the sustainability that some projects like StrongBlock are lacking. There is currently very little to no incentive
+            | to run Avalanche validators and we hope to become a critical part of securing and decentralizing the Avalanche
+            | network. With Emerald Nodes it is easy and stress free to make passive income and help grow and sustain the
+            | Avalanche network.

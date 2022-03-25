@@ -1,7 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 @import 'aos/dist/aos.css';
+@import './whitepaper.css';
 
 #mobile-nav {
   transform: translateY(-100%);
@@ -36,3 +37,7 @@
     transform: translateX(-1.8em) translateY(-0.075em);
   }
 }
+
+/* .whitepaper h3 {
+  @apply text-3xl font-bold;
+} */

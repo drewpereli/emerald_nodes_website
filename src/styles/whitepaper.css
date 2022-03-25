@@ -1,0 +1,22 @@
+
+.whitepaper {
+  & h3 {
+    @apply text-3xl font-bold mb-4 mt-16 first:mt-8;
+  }
+
+  & h4 {
+    @apply text-2xl font-bold my-4;
+  }
+
+  & h5 {
+    @apply text-xl font-bold my-4;
+  }
+
+  & ul {
+    @apply list-disc list-inside;
+  }
+
+  & p {
+    @apply my-4;
+  }
+}

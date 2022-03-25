@@ -55,6 +55,8 @@ module.exports = {
             options: {
               postcssOptions: {
                 plugins: [
+                  'postcss-import',
+                  'tailwindcss/nesting',
                   'tailwindcss',
                   purgecss({
                     content: ['./src/**/*.pug'],
