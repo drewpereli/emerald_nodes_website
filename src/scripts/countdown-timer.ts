@@ -1,4 +1,4 @@
-const endtime = 'March 29 2022 17:00:00 GMT-0600';
+const endtime = 'March 29 2022 17:00:00 GMT-0500';
 
 function getTimeRemaining() {
   const total = Date.parse(endtime) - Date.parse(new Date().toString());
