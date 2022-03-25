@@ -2,27 +2,50 @@ extends ../templates/layout.pug
 
 include ../components/header
 include ../components/block-1
+include ../components/block-2
+
+mixin employee({name, title, linkedInUrl, imageSrc})
+  .space-y-2
+    .flex.items-center.space-x-4
+      .uppercase.text-xl= name
+      a(href=linkedInUrl target="_blank" class="text-white-off/80 hover:text-white-off")
+        i.fab.fa-linkedin
+    if title
+      .whitespace-nowrap(class="text-white-off/50")= title
+    if imageSrc
+      img.w-full(src=imageSrc)
 
 block content
   .px-8.mt-8.w-full.max-w-6xl.mx-auto
     +block-1
       +header Our Team
       .mt-4.space-y-8(class="md:flex md:space-y-0 md:space-x-16")
-        .space-y-4
-          .flex.items-center
-            .uppercase.text-xl Baxter
-            .ml-1.whitespace-nowrap(class="text-white-off/50") | Founder
-          img.w-full(src=require('Images/baxter.jpg'))
-          .text-sm.italic Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente iusto ex cumque eveniet temporibus laudantium, ducimus ea expedita ab alias error commodi voluptatibus quasi magnam atque ratione vel sed optio.
-        .space-y-4
-          .flex.items-center
-            .uppercase.text-xl Shane
-            .ml-1.whitespace-nowrap(class="text-white-off/50") | Founder
-          img.w-full(src=require('Images/shane.png'))
-          .text-sm.italic Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente iusto ex cumque eveniet temporibus laudantium, ducimus ea expedita ab alias error commodi voluptatibus quasi magnam atque ratione vel sed optio.
-        .space-y-4
-          .flex.items-center.flex-wrap
-            .uppercase.text-xl Winjit
-            .ml-1.whitespace-nowrap(class="text-white-off/50") | Blockchain Developer
-          img.w-full(src=require('Images/winjit.png'))
-          .text-sm.italic Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente iusto ex cumque eveniet temporibus laudantium, ducimus ea expedita ab alias error commodi voluptatibus quasi magnam atque ratione vel sed optio.
+        +employee({
+          name: 'Baxter Moffitt',
+          title: 'Co-CEO and Founder',
+          linkedInUrl: 'https://www.linkedin.com/in/baxter-moffitt-84b363171/',
+          imageSrc: require('Images/baxter.png')
+        })
+        +employee({
+          name: 'Shane Stoffer',
+          title: 'Co-CEO and Founder',
+          linkedInUrl: 'https://www.linkedin.com/in/shanestoffer/',
+          imageSrc: require('Images/shane.png')
+        })
+
+    +block-2.mt-8.space-y-8
+      +header Blockchain Development Team
+      .text-3xl.font-black Winjit INC
+      .flex.flex-col.space-y-8(class="md:flex-row md:items-center md:justify-around md:space-x-8 md:space-y-0")
+        - 
+          var devs = [
+            {name: 'Kevin Paul', linkedInUrl: 'https://www.linkedin.com/in/kbpaul'},
+            {name: 'Vignesh Iyer', linkedInUrl: 'https://www.linkedin.com/in/vigneshi'},
+            {name: 'Vishal Waman', linkedInUrl: 'https://www.linkedin.com/in/vishal-waman-7307b522'},
+          ].map(d => {
+            d.title = 'Blockchain Developer';
+            return d;
+          })
+
+        each dev in devs
+          +employee(dev)
