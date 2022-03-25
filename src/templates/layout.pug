@@ -12,12 +12,8 @@ html.h-full.bg-black-off.font-body.tracking-wider.overflow-x-hidden(lang="en")
   body.h-full.flex.flex-col
     .shrink-0(class="md:px-12")
       .p-4.flex.items-center.justify-between.h-48.border-b-2(class="border-white-off/50")
-        a.space-x-4.flex.items-center(class="md:space-x-8" href="/")
-          img(src=require('Images/logo-small.png') style="height: 100px;")
-          .flex.text-secondary-300.space-x-2
-            +inline-svg('chevron-triple').h-8.rotate-180
-            span.text-xl.font-bold.mt-2 EMERALD NODES
-            +inline-svg('chevron-triple').h-12.translate-y-4
+        a.shrink-0(href="/")
+          img(src=require('Images/logo-with-text.png') style="height: 100px;")
 
         -
           var pages = [
