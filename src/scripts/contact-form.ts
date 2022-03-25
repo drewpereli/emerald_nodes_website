@@ -40,8 +40,9 @@ export default function setupContactForm() {
     let formData = new FormData(e.target as HTMLFormElement);
 
     let templateParams = {
-      from_name: formData.get('name') || 'an anonymous user',
+      from_name: formData.get('name'),
       from_email: formData.get('email'),
+      subject: formData.get('subject'),
       message: formData.get('message'),
     };
 

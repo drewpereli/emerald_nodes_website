@@ -10,9 +10,11 @@ block content
 
     +block-1
       +header Get in touch
-      form#contact-form.w-full.mt-4
-        +input({id: 'name-input', label: 'name', name: 'name'})
+      .mt-4 Thanks for your interest in the protocol! If you're looking to get in touch with a representative from Emerald, please fill out the form below and someone will reach out to you shortly.
+      form#contact-form.w-full.mt-4.text-black-off
+        +input({id: 'name-input', label: 'name', name: 'name', required: true})
         +input({id: 'email-input', label: 'email', name: 'email', type: 'email', required: true}).mt-4
+        +input({id: 'subject-input', label: 'subject', name: 'subject', required: true}).mt-4
         +input({id: 'message-input', label: 'message', name: 'message', type: 'textarea', required: true}).mt-4
         .flex.justify-between.mt-4
           .flex.items-center.text-sm.relative.flex-grow
