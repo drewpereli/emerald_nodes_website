@@ -9,9 +9,11 @@ include ../components/block-2
 include ../components/block-3
 
 block content
-  .bg-logo-big.w-full.bg-cover.flex.items-center.justify-center(style="height: 32rem; background-position: center 40%;")
-    .hidden(class="md:block")
-      +countdown-timer
+  .w-full
+    img(src=require('Images/header-animation.gif'))
+  
+  .flex.items-center.justify-center.mt-8
+    +countdown-timer
   
   .mt-8.flex.items-center.justify-center.px-8.space-x-12
     +block-1.w-full.max-w-4xl.space-y-4
