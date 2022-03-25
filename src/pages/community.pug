@@ -8,31 +8,33 @@ include ../components/button
 
 block content
   .px-8.mt-8.w-full.max-w-6xl.mx-auto(class="md:flex md:space-x-8")
-    +block-2
+    +block-2(class="md:w-1/2")
       +header Our Community
       .mt-4
         .text-xl.flex.items-center.space-x-4(class="text-white-off/70")
           .uppercase.font-medium Discord
-          i.fab.fa-discord
-        .mt-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque accusamus mollitia earum voluptatibus necessitatibus impedit, veritatis ratione optio architecto aspernatur hic sapiente modi, error accusantium in amet, aliquid quae vero?
+          a(href="https://discord.com/invite/BVNJ9t2WJh" target="_blank" class="text-white-off/80 hover:text-white-off")
+            i.fab.fa-discord
+        .mt-4 Discord is our hub for community interaction + communication. Our team uses it to make announcements, host giveaways/contests, and answer questions from the community. Our members use it to fellowship…
       .mt-8
         .text-xl.flex.items-center.space-x-4(class="text-white-off/70")
           .uppercase.font-medium Twitter
-          i.fab.fa-twitter
-        .mt-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque accusamus mollitia earum voluptatibus necessitatibus impedit, veritatis ratione optio architecto aspernatur hic sapiente modi, error accusantium in amet, aliquid quae vero?
+          a(href="https://twitter.com/Emerald_Nodes" target="_blank" class="text-white-off/80 hover:text-white-off")
+            i.fab.fa-twitter
+        .mt-4 Follow the Emerald Nodes Twitter page #[a(href="https://twitter.com/Emerald_Nodes" target="_blank") @Emerald_Nodes] to stay up to date on all the latest Emerald news! Our Twitter hosts giveaways, posts important updates, and is a great way to stay engaged with the community.
 
-    +block-1.mt-8(class="md:mt-0")
+    +block-1.mt-8(class="md:mt-0 md:w-1/2")
       +header Our Apps
       .mt-4
         .text-xl.flex.items-center.space-x-4(class="text-white-off/70")
-          .uppercase.font-medium Our Webapps
-        .mt-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque accusamus mollitia earum voluptatibus necessitatibus impedit, veritatis ratione optio architecto aspernatur hic sapiente modi, error accusantium in amet, aliquid quae vero?
+          .uppercase.font-medium Nodes App
+        .mt-4 The node platform is finally here! Navigate to the web app to set up our first Emerald Node. Hurry while Tiers are available!
         +button.mt-4.w-full.shadow-lg 
-          a.py-2.w-full.h-full.block(href="https://app.emeraldnodes.finance" target="_blank") Node App
+          a.py-2.w-full.h-full.block(href="https://app.emeraldnodes.finance" target="_blank") Nodes App
 
       .mt-8
         .text-xl.flex.items-center.space-x-4(class="text-white-off/70")
           .uppercase.font-medium Token Swap Site
-        .mt-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque accusamus mollitia earum voluptatibus necessitatibus impedit, veritatis ratione optio architecto aspernatur hic sapiente modi, error accusantium in amet, aliquid quae vero?
+        .mt-4 All Emerald ICO participants will be required to swap their ICO tokens to a new Emerald token prior to using them to interact with the web app. For Every one primary EMERALD you swap, you will receive 1.335 new $EM tokens. The exchange rate of 1.335 was determined to ensure that all participants will receive a maximum price of $20/EMERALD for primary tokens.
         +button.mt-4.w-full.shadow-lg
           a.py-2.w-full.h-full.block(href="https://swap.emeraldnodes.finance" target="_blank") Swap Site
