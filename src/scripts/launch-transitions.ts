@@ -1,5 +1,5 @@
 export const NODES_APP_LAUNCH_TIME = 'March 29 2022 17:00:00 GMT-0500';
-const SWAP_APP_LAUNCH_TIME = 'March 29 2022 17:00:00 GMT-0500';
+const SWAP_APP_LAUNCH_TIME = 'March 26 2022 10:00:00 PDT';
 
 export function getTimeRemaining(endTime: string) {
   return Date.parse(endTime) - Date.parse(new Date().toString());
