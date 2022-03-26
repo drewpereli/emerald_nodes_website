@@ -47,14 +47,14 @@ block content
               .flex.flex-col.flex-wrap(class="md:block").
                 Buy Emerald tokens ($EM) on #[+inline-link("https://traderjoexyz.com") Trader Joe XYZ].
                 #[div(class="mt-2") #[strong $EM Contact Address:] (0x97E7044ab98B7891546485f5f66EDcc2F58be106)]
-                #[div(class="mt-2 italic text-base") Note: If you received EMERALD prior to launch (5pm March 9th, 2022) swap your old EMERALD for EMERALD v2 ($EM) on our #[+inline-link("http://swap.emeraldnodes.finance") Swap Site].] 
+                #[div(class="mt-2 italic text-base") Note: If you received EMERALD prior to launch (5pm March 9th, 2022) swap your old EMERALD for EMERALD v2 ($EM) on our #[+inline-link("http://swap.emeraldnodes.finance")(data-hide-until-swap-launch) Swap Site]#[span(data-show-until-swap-launch) Swap Site].] 
             +get-started-step(4).
-              Connect your wallet + create your nodes on our #[+inline-link("http://app.emeraldnodes.finance") Nodes App]!
+              Connect your wallet + create your nodes on our #[+inline-link("http://app.emeraldnodes.finance")(data-hide-until-nodes-launch) Nodes App]#[span(data-show-until-nodes-launch) Nodes App]!
             +get-started-step(5).
-              Manage your nodes in the “My Nodes” section in the #[+inline-link("http://app.emeraldnodes.finance") Nodes App]!
+              Manage your nodes in the “My Nodes” section in the #[+inline-link("http://app.emeraldnodes.finance")(data-hide-until-nodes-launch) Nodes App]#[span(data-show-until-nodes-launch) Nodes App]!
 
 
-          .flex.justify-center(data-hide-until-nodes-launch)
+          .flex.justify-center
             +button.w-full.max-w-2xl.text-2xl.shadow-xl.uppercase.font-black.outline(class="hover:shadow-2xl hover:-translate-y-2 transition-all")
               a.py-8.block.w-full.h-full(href="/get-started.html") Get Started
 
