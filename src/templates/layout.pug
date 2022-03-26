@@ -22,7 +22,7 @@ html.h-full.bg-black-off.font-body.tracking-wider.overflow-x-hidden(lang="en")
             {label: "Swap Site", route: "https://swap.emeraldnodes.finance", targetBlank: true, hideUntilSwapLaunch: true},
             {label: "Whitepaper", route: "/whitepaper.html"},
             {label: "Who Is Emerald", route: "/who-is-emerald.html"},
-            {label: "Community|Links", route: "/community.html"},
+            {label: "Community | Links", route: "/community.html"},
             {label: "Contact", route: "/contact.html"},
           ]
         div(class="md:self-end")
@@ -31,7 +31,7 @@ html.h-full.bg-black-off.font-body.tracking-wider.overflow-x-hidden(lang="en")
           nav#mobile-nav.absolute.top-0.left-0.w-full.bg-black-off.bg-opacity-90.text-white-off.transition-transform.duration-500
             each page in pages
               a.h-16.w-full.flex.items-center.justify-center.uppercase.font-medium(href=page.route target=page.targetBlank ? "_blank" : "_self" data-hide-until-nodes-launch=page.hideUntilNodesLaunch data-hide-until-swap-launch=page.hideUntilSwapLaunch)= page.label
-          .hidden.text-lg(class="md:flex md:items-center md:ml-auto md:space-x-12 text-white-off/50")
+          .hidden.text-base(class="md:flex md:items-center md:ml-auto md:space-x-12 text-white-off/50")
             each page in pages
               a.uppercase.cursor-pointer.transition-colors(class="hover:underline" href=page.route target=page.targetBlank ? "_blank" : "_self" data-hide-until-nodes-launch=page.hideUntilNodesLaunch data-hide-until-swap-launch=page.hideUntilSwapLaunch)= page.label
 
