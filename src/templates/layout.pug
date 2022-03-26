@@ -18,7 +18,8 @@ html.h-full.bg-black-off.font-body.tracking-wider.overflow-x-hidden(lang="en")
         -
           var pages = [
             {label: "Get Started", route: "/get-started.html"},
-            {label: "Nodes App", route: "https://app.emeraldnodes.finance", targetBlank: true},
+            {label: "Nodes App", route: "https://app.emeraldnodes.finance", targetBlank: true, hideUntilNodesLaunch: true},
+            {label: "Swap Site", route: "https://swap.emeraldnodes.finance", targetBlank: true, hideUntilSwapLaunch: true},
             {label: "Whitepaper", route: "/whitepaper.html"},
             {label: "Who Is Emerald", route: "/who-is-emerald.html"},
             {label: "Community|Links", route: "/community.html"},
@@ -29,10 +30,10 @@ html.h-full.bg-black-off.font-body.tracking-wider.overflow-x-hidden(lang="en")
             i.fas.fa-bars
           nav#mobile-nav.absolute.top-0.left-0.w-full.bg-black-off.bg-opacity-90.text-white-off.transition-transform.duration-500
             each page in pages
-              a.h-16.w-full.flex.items-center.justify-center.uppercase.font-medium(href=page.route target=page.targetBlank ? "_blank" : "_self")= page.label
+              a.h-16.w-full.flex.items-center.justify-center.uppercase.font-medium(href=page.route target=page.targetBlank ? "_blank" : "_self" data-hide-until-nodes-launch=page.hideUntilNodesLaunch data-hide-until-swap-launch=page.hideUntilSwapLaunch)= page.label
           .hidden.text-lg(class="md:flex md:items-center md:ml-auto md:space-x-12 text-white-off/50")
             each page in pages
-              a.uppercase.cursor-pointer.transition-colors(class="hover:underline" href=page.route target=page.targetBlank ? "_blank" : "_self")= page.label
+              a.uppercase.cursor-pointer.transition-colors(class="hover:underline" href=page.route target=page.targetBlank ? "_blank" : "_self" data-hide-until-nodes-launch=page.hideUntilNodesLaunch data-hide-until-swap-launch=page.hideUntilSwapLaunch)= page.label
 
     #content.grow.shrink-0.basis-auto
       block content

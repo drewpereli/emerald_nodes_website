@@ -18,9 +18,10 @@ mixin get-started-step(stepNumber)
 
 block content
   .w-full
-    img(src=require('Images/header-animation.gif'))
+    img(src=require('Images/header-animation.gif') data-show-until-nodes-launch)
+    img(src=require('Images/header-animation-no-text.gif') data-hide-until-nodes-launch)
   
-  .items-center.justify-center.mt-8.hidden(class="md:flex")
+  .items-center.justify-center.mt-8.hidden(class="md:flex" data-show-until-nodes-launch)
     +countdown-timer
   
   .mt-8.flex.items-center.justify-center.px-8.space-x-12
@@ -53,7 +54,7 @@ block content
               Manage your nodes in the “My Nodes” section in the #[+inline-link("http://app.emeraldnodes.finance") Nodes App]!
 
 
-          .flex.justify-center
+          .flex.justify-center(data-hide-until-nodes-launch)
             +button.w-full.max-w-2xl.text-2xl.shadow-xl.uppercase.font-black.outline(class="hover:shadow-2xl hover:-translate-y-2 transition-all")
               a.py-8.block.w-full.h-full(href="/get-started.html") Get Started
 
