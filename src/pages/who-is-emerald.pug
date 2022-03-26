@@ -39,13 +39,25 @@ block content
       .flex.flex-col.space-y-8(class="md:flex-row md:items-center md:justify-around md:space-x-8 md:space-y-0")
         - 
           var devs = [
-            {name: 'Kevin Paul', linkedInUrl: 'https://www.linkedin.com/in/kbpaul'},
-            {name: 'Vignesh Iyer', linkedInUrl: 'https://www.linkedin.com/in/vigneshi'},
-            {name: 'Vishal Waman', linkedInUrl: 'https://www.linkedin.com/in/vishal-waman-7307b522'},
-          ].map(d => {
-            d.title = 'Blockchain Developer';
-            return d;
-          })
+            {name: 'Kevin Paul', linkedInUrl: 'https://www.linkedin.com/in/kbpaul', title: 'Business development representative'},
+            {name: 'Vignesh Iyer', linkedInUrl: 'https://www.linkedin.com/in/vigneshi', title: 'Blockchain Developer'},
+            {name: 'Vishal Waman', linkedInUrl: 'https://www.linkedin.com/in/vishal-waman-7307b522', title: 'Blockchain Developer'},
+          ]
 
         each dev in devs
           +employee(dev)
+      
+      img.w-full.max-w-3xl.mx-auto(src=require('Images/winjit.jpg'))
+
+      div.
+        Winjit has been an Emerging Tech company since 2004 which
+        specializes in Internet of Things (IoT), AI/ML, Computer Vision,
+        and since 2016, Blockchain Development. Since the inception in 2016,
+        Winjit's Blockchain Development Team has finished 85+ projects
+        including DApps, DAOs, NFTs, Marketplaces, Web 3 Plugins,
+        Delegated Staking, Node as a Service, Smart Contracts and more.
+        With a full stack development team and an award winning UI/UX app and
+        website design team, Winjit has experience in the blockchain development languages
+        Solidity, Rust and Haskell. Winjit has consistently demonstrated Thought Leadership
+        across different blockchain protocols and ecosystems. To get more information, reach
+        out to Kevin Paul on LinkedIn to learn about other projects Winjit has completed.
