@@ -9,6 +9,7 @@
     "start": "webpack serve --open --config webpack.dev.js",
     "lint": "eslint . && prettier --check .",
     "lint:fix": "eslint --fix . && prettier --write .",
+    "deploy:prod": "sh ./deploy.sh",
     "deploy:staging": "sh ./deploy-staging.sh"
   },
   "keywords": [],

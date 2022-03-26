@@ -1,3 +1,4 @@
 dist
+deploy.sh
 deploy-staging.sh
 .env
