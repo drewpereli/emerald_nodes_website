@@ -27,6 +27,9 @@ module.exports = {
       fontFamily: {
         body: ['arial', 'sans-serif'],
       },
+      maxWidth: {
+        '10xl': '120rem',
+      },
     },
   },
   plugins: [],

@@ -11,9 +11,9 @@ include ../components/inline-link
 include ../components/get-started-step
 
 block content
-  .w-full
-    img(src=require('Images/header-animation.gif') data-show-until-nodes-launch)
-    img(src=require('Images/header-animation-no-text.gif') data-hide-until-nodes-launch)
+  .w-full.flex.justify-center
+    img.w-full.max-w-10xl(src=require('Images/header-animation.gif') data-show-until-nodes-launch)
+    img.w-full.max-w-10xl(src=require('Images/header-animation-no-text.gif') data-hide-until-nodes-launch)
   
   .items-center.justify-center.mt-8.hidden(class="md:flex" data-show-until-nodes-launch)
     +countdown-timer
@@ -23,34 +23,35 @@ block content
       .text-3xl.font-bold.uppercase.text-white-off Vision
       div We enable our users to start earning passive income immediately by setting up a node on the Avalanche (AVAX) network with the few clicks of a button. Emerald Nodes intends to serve as a pillar supporting the large majority of the Avalanche (AVAX) network by incentivizing nodes through Nodes as a Service (NaaS). We aim to be the first truly sustainable NaaS protocol on the Avalanche network.
 
-  .mt-8.px-4.py-8.flex.items-center(class="bg-white-off/50 md:space-x-12 md:px-16" data-aos="fade-up")
-    .bg-logo-big.bg-cover.bg-no-repeat.flex-grow.bg-bottom.hidden.self-stretch(class="md:block" style="border-radius: 40px;")
-    .space-y-4.text-secondary-500.border-b.border-secondary-500.pb-8.grow-0.w-full(class="md:w-5/6")
-      .text-3xl.font-bold Get Started
-      .flex.items-center
-        +inline-svg('chevron').h-48.hidden(class="md:block")
+  .mt-8.px-4.py-8.flex.items-center.justify-center(class="bg-white-off/50 md:px-16" data-aos="fade-up")
+    .flex.items-center.w-full.max-w-10xl(class="md:space-x-12")
+      .bg-logo-big.bg-cover.bg-no-repeat.flex-grow.bg-bottom.hidden.self-stretch(class="md:block" style="border-radius: 40px;")
+      .space-y-4.text-secondary-500.border-b.border-secondary-500.pb-8.grow-0.w-full(class="md:w-5/6")
+        .text-3xl.font-bold Get Started
+        .flex.items-center
+          +inline-svg('chevron').h-48.hidden(class="md:block")
 
-        .space-y-16.w-full
-          ul.list-disc.space-y-4.text-xl(class="md:pl-4 md:ml-8")
-            +get-started-step(1) Purchase $AVAX.
-            +get-started-step(2).
-              Move your $AVAX to a
-              #[+inline-link("https://walletconnect.com/registry?type=wallet") WalletConnect-compatible wallet]
-              (including #[+inline-link("https://metamask.io/") MetaMask]).
-            +get-started-step(3)
-              .flex.flex-col.flex-wrap(class="md:block").
-                Buy Emerald tokens ($EM) on #[+inline-link("https://traderjoexyz.com") Trader Joe XYZ].
-                #[div(class="mt-2") #[strong $EM Contact Address:] (0x97E7044ab98B7891546485f5f66EDcc2F58be106)]
-                #[div(class="mt-2 italic text-base") Note: If you received EMERALD prior to launch (5pm March 9th, 2022) swap your old EMERALD for EMERALD v2 ($EM) on our #[+inline-link("http://swap.emeraldnodes.finance")(data-hide-until-swap-launch) Swap Site]#[span(data-show-until-swap-launch) Swap Site].] 
-            +get-started-step(4).
-              Connect your wallet + create your nodes on our #[+inline-link("http://app.emeraldnodes.finance")(data-hide-until-nodes-launch) Nodes App]#[span(data-show-until-nodes-launch) Nodes App]!
-            +get-started-step(5).
-              Manage your nodes in the “My Nodes” section in the #[+inline-link("http://app.emeraldnodes.finance")(data-hide-until-nodes-launch) Nodes App]#[span(data-show-until-nodes-launch) Nodes App]!
+          .space-y-16.w-full
+            ul.list-disc.space-y-4.text-xl(class="md:pl-4 md:ml-8")
+              +get-started-step(1) Purchase $AVAX.
+              +get-started-step(2).
+                Move your $AVAX to a
+                #[+inline-link("https://walletconnect.com/registry?type=wallet") WalletConnect-compatible wallet]
+                (including #[+inline-link("https://metamask.io/") MetaMask]).
+              +get-started-step(3)
+                .flex.flex-col.flex-wrap(class="md:block").
+                  Buy Emerald tokens ($EM) on #[+inline-link("https://traderjoexyz.com") Trader Joe XYZ].
+                  #[div(class="mt-2 break-all") #[strong $EM Contact Address:] (0x97E7044ab98B7891546485f5f66EDcc2F58be106)]
+                  #[div(class="mt-2 italic text-base") Note: If you received EMERALD prior to launch (5pm March 9th, 2022) swap your old EMERALD for EMERALD v2 ($EM) on our #[+inline-link("http://swap.emeraldnodes.finance")(data-hide-until-swap-launch) Swap Site]#[span(data-show-until-swap-launch) Swap Site].] 
+              +get-started-step(4).
+                Connect your wallet + create your nodes on our #[+inline-link("http://app.emeraldnodes.finance")(data-hide-until-nodes-launch) Nodes App]#[span(data-show-until-nodes-launch) Nodes App]!
+              +get-started-step(5).
+                Manage your nodes in the “My Nodes” section in the #[+inline-link("http://app.emeraldnodes.finance")(data-hide-until-nodes-launch) Nodes App]#[span(data-show-until-nodes-launch) Nodes App]!
 
 
-          .flex.justify-center
-            +button.w-full.max-w-2xl.text-2xl.shadow-xl.uppercase.font-black.outline(class="hover:shadow-2xl hover:-translate-y-2 transition-all")
-              a.py-8.block.w-full.h-full(href="/get-started.html") Get Started
+            .flex.justify-center
+              +button.w-full.max-w-2xl.text-2xl.shadow-xl.uppercase.font-black.outline(class="hover:shadow-2xl hover:-translate-y-2 transition-all")
+                a.py-8.block.w-full.h-full(href="/get-started.html") Get Started
 
   .mt-8.flex.flex-col.px-8
 
@@ -59,8 +60,8 @@ block content
       .mt-4.text-lg.
         The service Emerald Nodes offers its users is the ability to set up, manage, and own real reward yielding “nodes”. A “node” is a computer that serves as a backbone in the infrastructure of its native cryptocurrency network. Anyone can buy an Emerald Node or $EM, our native token; it works just like any other tradable cryptocurrency, and is used to set up nodes on the protocol’s web app. Emerald Nodes exist on the Avalanche (AVAX) network. We incentivize our users to create these nodes and support the AVAX network by regularly yielding rewards. Emerald handles 100% of the AVAX validator setup and backend to ensure a quick and seamless experience for users. It takes only a few clicks to set up a node. Each node begins accruing rewards instantly, and nodes take only seconds to set up!
   
-    .flex.flex-col.space-y-8.mt-8(class="md:flex-row md:space-x-8 md:space-y-0")
-      +block-2.grow(class="md:w-1/2" data-aos="fade-right")
+    .flex.flex-col.space-y-8.mt-8(class="md:flex-row md:space-x-8 md:space-y-0 md:justify-center")
+      +block-2.max-w-4xl(class="md:w-1/2" data-aos="fade-right")
         +header.italic Avalanche Network
         .mt-4
           div Emerald Nodes currently operates on the #[+inline-link("https://welcome.avax.network/") Avalanche (AVAX) network]. 
@@ -75,7 +76,7 @@ block content
                 li Seldom is a gas fee for a single transaction higher than $0.20 USD, and almost never is a gas fee above $0.25. 
                 li AVAX is also much more environmentally friendly as a protocol. The network uses on the order of 10,000x less energy per year than Bitcoin or Ethereum. (0.0005% of the energy BTC uses, and 0.0028% of the energy ETH uses.)
 
-      +block-3.grow(data-aos="fade-left" class="md:w-1/2")
+      +block-3.max-w-4xl(data-aos="fade-left" class="md:w-1/2")
         +header.flex.justify-between.items-center.italic Built for the Future
           +inline-svg('chevron-triple').h-12.my-2
         .mt-4
