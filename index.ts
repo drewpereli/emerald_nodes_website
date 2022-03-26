@@ -17,3 +17,9 @@ setupContactForm();
 setupLaunchTransitions();
 
 // AOS.init({ duration: 800 });
+
+const copyrightYear = document.getElementById('copyright-year');
+
+if (copyrightYear) {
+  copyrightYear.innerHTML = new Date().getFullYear().toString();
+}

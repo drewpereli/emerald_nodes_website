@@ -38,6 +38,12 @@ html.h-full.bg-black-off.font-body.tracking-wider.overflow-x-hidden(lang="en")
     #content.grow.shrink-0.basis-auto
       block content
       
-    .mt-32.h-32.px-4.py-8.flex.justify-around.shrink-0(class="bg-primary-500/70")
-      each word in ['copyright', 'date', 'social buttons', 'contact info']
-        span.uppercase.text-lg.tracking-wide(class="text-white-off/30")= word
+    .mt-32.p-8.flex.flex-col.items-center.space-y-8.shrink-0.uppercase.text-lg.tracking-wide(class="bg-primary-500/70 text-white-off/30 md:justify-around md:flex-row md:space-y-0 md:h-32")
+      div &copy; #[span(id="copyright-year")] EmeraldNodes Co.
+      .space-x-8
+        a(href="https://discord.com/invite/BVNJ9t2WJh" target="_blank" class="hover:text-white-off")
+          i.fab.fa-discord
+        a(href="https://twitter.com/Emerald_Nodes" target="_blank" class="hover:text-white-off")
+          i.fab.fa-twitter
+      div 
+        a(href="mailto:contact@emeraldnodes.finance" class="hover:underline hover:text-white-off/60") contact@emeraldnodes.finance
