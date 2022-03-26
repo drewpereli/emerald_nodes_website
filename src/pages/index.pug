@@ -8,13 +8,7 @@ include ../components/block-1
 include ../components/block-2
 include ../components/block-3
 include ../components/inline-link
-
-mixin get-started-step(stepNumber)
-  li.flex.flex-col.space-y-2(class="md:flex-row md:space-y-0 md:space-x-2")
-    .font-bold.shrink-0 Step #{stepNumber}:
-    div
-      if block
-        block
+include ../components/get-started-step
 
 block content
   .w-full
@@ -40,7 +34,7 @@ block content
           ul.list-disc.space-y-4.text-xl(class="md:pl-4 md:ml-8")
             +get-started-step(1) Purchase $AVAX.
             +get-started-step(2).
-              Move your AVAX to a
+              Move your $AVAX to a
               #[+inline-link("https://walletconnect.com/registry?type=wallet") WalletConnect-compatible wallet]
               (including #[+inline-link("https://metamask.io/") MetaMask]).
             +get-started-step(3)

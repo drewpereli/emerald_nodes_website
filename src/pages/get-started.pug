@@ -5,36 +5,47 @@ include ../components/block-1
 include ../components/block-2
 include ../components/block-3
 include ../components/button
+include ../components/inline-link
+include ../components/get-started-step
 
 
 block content
   .px-8.mt-8.w-full.max-w-6xl.mx-auto
-    +block-2.text-white-off
-      +header Summary Blurb
+    +block-1.mt-8.space-y-8
+      +header Get Started
+      div Buying EMERALD and creating nodes is extremely simple. We handle all of the complexities of setting up validators on the Avalanche network for you. All you have to do is follow the steps below to start claiming rewards.
+      .space-y-16.w-full
+        ul.list-disc.space-y-4.text-xl(class="md:pl-4 md:ml-8")
+          +get-started-step(1). 
+            Purchase $AVAX, the Avalanche network’s native token. The most common way to do this is via a centralized exchange such as
+            #[+inline-link("https://www.coinbase.com/") Coinbase], #[+inline-link("https://www.kucoin.com/") KuCoin], or #[+inline-link("https://crypto.com/") crypto.com].
+
+          +get-started-step(2).
+            Move your $AVAX to a
+            #[+inline-link("https://walletconnect.com/registry?type=wallet") WalletConnect-compatible wallet]
+            (including #[+inline-link("https://metamask.io/") MetaMask]).
+
+          +get-started-step(3)
+            .flex.flex-col.flex-wrap(class="md:block")
+              div Using #[+inline-link("https://traderjoexyz.com") Trader Joe XYZ], swap your AVAX tokens for Emerald!
+              .mt-2 Once you’ve connected your wallet to the homepage, elect to swap from $AVAX, to $EM. 
+              div The Emerald token ($EM) will not be on the list, you must manually paste the contract into the “To” section. 
+              .mt-2.break-all #[strong $EM Contact Address:] (0x97E7044ab98B7891546485f5f66EDcc2F58be106)
+              .mt-2.italic.text-base.
+                Note: If you purchased EMERALD in our ICO or received any prior to Launch (March 29th, 2022), please make sure to go to our 
+                #[+inline-link("http://swap.emeraldnodes.finance")(data-hide-until-swap-launch) Token Swap Site]#[span(data-show-until-swap-launch) Token Swap Site]
+                and exchange your old EMERALD for EMERALD v2 ($EM). You will not be able to set up nodes with your old tokens.
+
+          +get-started-step(4)
+            div Visit our #[+inline-link("http://app.emeraldnodes.finance")(data-hide-until-nodes-launch) Nodes App]#[span(data-show-until-nodes-launch) Nodes App] and connect your wallet.
+            .mt-2 Then click “Create Your Node” to set up an Emerald Node. You will have to read and sign the terms and conditions. 
+            .mt-2 Node creation happens within seconds, and your node will appear under “My Nodes”.
+
+    +block-3.mt-8
+      +header Manage Nodes
       .mt-4.
-        Text description Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, in soluta, repellat eius recusandae non expedita dolorem accusantium placeat obcaecati natus cupiditate eos unde aliquam laudantium ipsa dolore libero saepe.
-
-    .flex.flex-col(class="md:flex-row md:space-x-8")
-      +block-1.mt-8(class="md:w-1/2")
-        +header Get Started
-        .space-y-8.divide-y(class="divide-white-off/50")
-          .space-y-4.pt-4
-            .font-bold Step 1
-            div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure error eligendi enim consequatur quaerat voluptatem alias provident quasi aliquam! Repellendus quod deleniti reiciendis sint hic voluptatem, inventore tenetur nisi.
-          .space-y-4.pt-4
-            .font-bold Step 2
-            div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure error eligendi enim consequatur quaerat voluptatem alias provident quasi aliquam! Repellendus quod deleniti reiciendis sint hic voluptatem, inventore tenetur nisi.
-          .space-y-4.pt-4
-            .font-bold Step 3
-            div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure error eligendi enim consequatur quaerat voluptatem alias provident quasi aliquam! Repellendus quod deleniti reiciendis sint hic voluptatem, inventore tenetur nisi.
-          .space-y-4.pt-4
-            .font-bold Step 4
-            div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure error eligendi enim consequatur quaerat voluptatem alias provident quasi aliquam! Repellendus quod deleniti reiciendis sint hic voluptatem, inventore tenetur nisi.
-        .mt-12.flex.justify-center
-          +button.w-full.max-w-2xl.shadow-lg 
-            a.py-2.w-full.h-full.block(href="https://app.emeraldnodes.finance" target="_blank") Nodes App
-
-      +block-3.mt-8(class="md:w-1/2")
-        +header Manage Nodes
-        .mt-4.
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, nemo temporibus ad quo non nisi accusantium rem laboriosam voluptatum, praesentium beatae. Ad culpa delectus aspernatur? Hic consequatur deserunt dolores tempore?
+        To manage your nodes, visit the “My Nodes” section on our #[+inline-link("http://app.emeraldnodes.finance")(data-hide-until-nodes-launch) Nodes App]#[span(data-show-until-nodes-launch) Nodes App].
+        From here you may view and claim rewards (once the treasury feature
+        is released there will also be an option to sell nodes,
+        where you can sell your node for the price of the “BPN”
+        (backing per node). In the “My Nodes” section you can view the RPC endpoints of your nodes.

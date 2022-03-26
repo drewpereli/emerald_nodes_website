@@ -1,0 +1,6 @@
+mixin get-started-step(stepNumber)
+  li.flex.flex-col.space-y-2(class="md:flex-row md:space-y-0 md:space-x-2")
+    .font-bold.shrink-0 Step #{stepNumber}:
+    div
+      if block
+        block
