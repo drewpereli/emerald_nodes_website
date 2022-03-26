@@ -1,5 +1,5 @@
 export const NODES_APP_LAUNCH_TIME = 'March 29 2022 17:00:00 GMT-0500';
-const SWAP_APP_LAUNCH_TIME = 'March 26 2032 10:00:00 PDT';
+const SWAP_APP_LAUNCH_TIME = 'March 26 2022 10:00:00 PDT';
 
 // const soon = new Date(Date.now() + 3000).toString();
 // export const NODES_APP_LAUNCH_TIME = soon;
