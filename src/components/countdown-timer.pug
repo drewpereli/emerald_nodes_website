@@ -1,5 +1,5 @@
 mixin countdown-timer
-  .countdown-timer.flex.items-center.text-white-off.py-4.px-8.rounded-lg.border.border-white-off(class="bg-black-off/80")
+  .countdown-timer.flex.flex-col.items-center.text-white-off.p-4.space-y-8.rounded-lg.border.border-white-off(class="bg-black-off/80 md:flex-row md:space-y-0 md:px-8")
     each unit in ['days', 'hours', 'minutes', 'seconds']
       .w-40.space-y-4
         .font-black.text-8xl.text-center.w-full(data-component=unit)
