@@ -11,6 +11,7 @@ const pages = [
   'who-is-emerald',
   'community',
   'contact',
+  'privacy-policy',
 ];
 
 module.exports = {

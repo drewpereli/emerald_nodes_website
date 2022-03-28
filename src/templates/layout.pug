@@ -1,4 +1,5 @@
 include ../components/inline-svg
+include ../components/inline-link
 
 doctype html
 html.h-full.bg-black-off.font-body.tracking-wider.overflow-x-hidden(lang="en")
@@ -38,13 +39,17 @@ html.h-full.bg-black-off.font-body.tracking-wider.overflow-x-hidden(lang="en")
     #content.grow.shrink-0.basis-auto
       block content
       
-    .mt-32.p-8.flex.flex-col.items-center.space-y-8.shrink-0.uppercase.text-lg.tracking-wide(class="bg-primary-500/70 text-white-off/30 md:justify-around md:flex-row md:space-y-0 md:h-32")
-      div &copy; #[span(id="copyright-year")] Emerald Nodes LLC
-      .space-x-8
-        a(href="https://discord.com/invite/BVNJ9t2WJh" target="_blank" class="hover:text-white-off")
-          i.fab.fa-discord
-        a(href="https://twitter.com/Emerald_Nodes" target="_blank" class="hover:text-white-off")
-          i.fab.fa-twitter
-      div 
-        a(href="mailto:contact@emeraldnodes.finance" class="hover:underline hover:text-white-off/60") contact@emeraldnodes.finance
-      div Updated: March 25th, 2022
+    .mt-32.p-8.shrink-0(class="bg-primary-500/70 text-white-off/30 space-y-8")
+      .flex.flex-col.items-center.space-y-8.uppercase.text-lg.tracking-wide(class="md:justify-around md:flex-row md:space-y-0 md:flex-wrap")
+        div &copy; #[span(id="copyright-year")] Emerald Nodes LLC
+        .space-x-8
+          a(href="https://discord.com/invite/BVNJ9t2WJh" target="_blank" class="hover:text-white-off")
+            i.fab.fa-discord
+          a(href="https://twitter.com/Emerald_Nodes" target="_blank" class="hover:text-white-off")
+            i.fab.fa-twitter
+        div 
+          a(href="mailto:contact@emeraldnodes.finance" class="hover:underline hover:text-white-off/60") contact@emeraldnodes.finance
+        div Updated: March 25th, 2022
+      .flex.items-center.justify-around
+        .text-sm
+          +inline-link("/privacy-policy.html") privacy policy

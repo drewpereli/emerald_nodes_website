@@ -3,6 +3,7 @@
 @import 'tailwindcss/utilities';
 /* @import 'aos/dist/aos.css'; */
 @import './whitepaper.css';
+@import './privacy-policy.css';
 
 #mobile-nav {
   transform: translateY(-100%);
