@@ -4,6 +4,7 @@
 /* @import 'aos/dist/aos.css'; */
 @import './whitepaper.css';
 @import './privacy-policy.css';
+@import './terms-of-service.css';
 
 #mobile-nav {
   transform: translateY(-100%);

@@ -12,6 +12,7 @@ const pages = [
   'community',
   'contact',
   'privacy-policy',
+  'terms-of-service',
 ];
 
 module.exports = {
