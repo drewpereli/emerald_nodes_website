@@ -14,7 +14,8 @@ block content
   .w-full.flex.justify-center
     img.w-full.max-w-10xl(class="md:hidden" src=require('Images/mobile-header-animation.gif') data-show-until-nodes-launch)
     img.w-full.max-w-10xl.hidden(class="md:inline" src=require('Images/header-animation.gif') data-show-until-nodes-launch)
-    img.w-full.max-w-10xl(src=require('Images/header-animation-no-text.gif') data-hide-until-nodes-launch)
+    img.w-full.max-w-10xl(class="md:hidden" src=require('Images/mobile-header-animation-no-text.gif') data-hide-until-nodes-launch)
+    img.w-full.max-w-10xl.hidden(class="md:inline" src=require('Images/header-animation-no-text.gif') data-hide-until-nodes-launch)
   
   .flex.items-center.justify-center.mt-8.px-8
     div(data-show-until-nodes-launch)
@@ -51,7 +52,7 @@ block content
                 .flex.flex-col.flex-wrap(class="md:block").
                   Buy Emerald tokens ($EM) on #[+inline-link("https://app.pangolin.exchange/#/swap") Pangolin].
                   #[div(class="mt-2 break-all") #[strong $EM Contact Address:] (0x97E7044ab98B7891546485f5f66EDcc2F58be106)]
-                  #[div(class="mt-2 italic text-base") Note: If you received EMERALD prior to launch (5pm March 29th, 2022) swap your old EMERALD for EMERALD v2 ($EM) on our #[+inline-link("http://swap.emeraldnodes.finance")(data-hide-until-swap-launch) Swap Site]#[span(data-show-until-swap-launch) Swap Site].] 
+                  #[div(class="mt-2 italic text-base") Note: If you received EMERALD prior to launch (3pm ET March 29th, 2022) swap your old EMERALD for EMERALD v2 ($EM) on our #[+inline-link("http://swap.emeraldnodes.finance")(data-hide-until-swap-launch) Swap Site]#[span(data-show-until-swap-launch) Swap Site].] 
               +get-started-step(4).
                 Connect your wallet + create your nodes on our #[+inline-link("http://app.emeraldnodes.finance")(data-hide-until-nodes-launch) Nodes App]#[span(data-show-until-nodes-launch) Nodes App]!
               +get-started-step(5).
