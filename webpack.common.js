@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const purgecss = require('@fullhuman/postcss-purgecss');
 const Dotenv = require('dotenv-webpack');
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
+const RobotstxtPlugin = require('robotstxt-webpack-plugin');
 
 const pages = [
   'index',
@@ -41,6 +42,8 @@ module.exports = {
       base: 'https://emeraldnodes.finance',
       paths: pages.map((p) => `/${p}.html`),
     }),
+
+    new RobotstxtPlugin(),
   ],
   module: {
     rules: [

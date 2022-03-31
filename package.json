@@ -36,6 +36,7 @@
     "prettier": "^2.5.1",
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
+    "robotstxt-webpack-plugin": "^7.0.0",
     "sitemap-webpack-plugin": "^1.1.1",
     "svg-inline-loader": "^0.8.2",
     "tailwindcss": "^3.0.7",
