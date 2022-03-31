@@ -3,6 +3,9 @@ extends ../templates/layout.pug
 include ../components/header
 include ../components/block-1
 
+block variables
+  - var title = 'Terms of Service'
+
 block content
   .px-8.mt-8.w-full.max-w-6xl.mx-auto
     +block-1

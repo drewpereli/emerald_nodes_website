@@ -1,6 +1,8 @@
 include ../components/inline-svg
 include ../components/inline-link
 
+block variables
+
 doctype html
 html.h-full.bg-black-off.font-body.tracking-wider.overflow-x-hidden(lang="en")
   head
@@ -8,7 +10,11 @@ html.h-full.bg-black-off.font-body.tracking-wider.overflow-x-hidden(lang="en")
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='description', content='Emerald Nodes')
-    title Emerald Nodes
+    if title
+      title Emerald Nodes - #{title}
+    else
+      title Emerald Nodes
+    
 
   body.h-full.flex.flex-col
     .shrink-0(class="md:px-12")
