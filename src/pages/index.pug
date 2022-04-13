@@ -17,11 +17,14 @@ block content
     img.w-full.max-w-10xl(class="md:hidden" src=require('Images/mobile-header-animation-no-text.gif') data-hide-until-nodes-launch)
     img.w-full.max-w-10xl.hidden(class="md:inline" src=require('Images/header-animation-no-text.gif') data-hide-until-nodes-launch)
   
-  .flex.items-center.justify-center.mt-8.px-8
+  .flex.flex-col.items-center.justify-center.mt-8.px-8
     div(data-show-until-nodes-launch)
       +countdown-timer
     +button.w-full.max-w-2xl.text-2xl.shadow-xl.uppercase.font-black.outline(class="hover:shadow-2xl hover:-translate-y-2 transition-all" data-hide-until-nodes-launch)
-      a.py-8.block.w-full.h-full(href="http://app.emeraldnodes.finance" target="_blank") Buy Now
+      a.py-8.block.w-full.h-full(href="https://app.pangolin.exchange/#/swap?outputCurrency=0x97E7044ab98B7891546485f5f66EDcc2F58be106" target="_blank") Buy Now
+
+    +button.mt-8.w-full.max-w-2xl.text-2xl.shadow-xl.uppercase.font-black.outline(class="hover:shadow-2xl hover:-translate-y-2 transition-all")
+      a.py-8.block.w-full.h-full(href="https://app.emeraldnodes.finance/" target="_blank") Create a Node
   
   .mt-8.flex.items-center.justify-center.px-8.space-x-12
     +block-1.w-full.max-w-4xl.space-y-4
