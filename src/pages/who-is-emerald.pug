@@ -13,7 +13,7 @@ mixin employee({name, title, linkedInUrl, imageSrc})
     if title
       .whitespace-nowrap(class="text-white-off/50")= title
     if imageSrc
-      img.w-full(src=imageSrc)
+      img.w-full(alt=`${name} -- ${title}` src=imageSrc)
 
 block variables
   - var title = 'Who is Emerald'
@@ -51,7 +51,7 @@ block content
         each dev in devs
           +employee(dev)
       
-      img.w-full.max-w-3xl.mx-auto(src=require('Images/winjit.jpg'))
+      img.w-full.max-w-3xl.mx-auto(alt="Winjit logo" src=require('Images/winjit.jpg'))
 
       div.
         Winjit has been an Emerging Tech company since 2004 which
