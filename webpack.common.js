@@ -43,7 +43,9 @@ module.exports = {
       paths: pages.map((p) => `/${p}.html`),
     }),
 
-    new RobotstxtPlugin(),
+    new RobotstxtPlugin({
+      sitemap: 'https://emeraldnodes.finance/sitemap.xml',
+    }),
   ],
   module: {
     rules: [
