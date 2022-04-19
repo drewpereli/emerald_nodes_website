@@ -52,9 +52,12 @@ block content
                 #[+inline-link("https://walletconnect.com/registry?type=wallet") WalletConnect-compatible wallet]
                 (including #[+inline-link("https://metamask.io/") MetaMask]).
               +get-started-step(3)
-                .flex.flex-col.flex-wrap(class="md:block").
-                  Buy Emerald tokens ($EM) on #[+inline-link("https://traderjoexyz.com/") Trader Joe].
-                  #[div(class="mt-2 break-all") #[strong $EM Contact Address:] (0x97E7044ab98B7891546485f5f66EDcc2F58be106)]
+                .flex.flex-col.flex-wrap(class="md:block")
+                  span Buy Emerald tokens ($EM) on #[+inline-link("https://traderjoexyz.com/") Trader Joe].
+                  .mt-2.break-all #[strong $EM Contact Address:] (0x97E7044ab98B7891546485f5f66EDcc2F58be106)
+                  .mt-2.italic
+                    strong Note: 
+                    span $EM is now on #[+inline-link("https://analytics.traderjoexyz.com/pairs/0x1673b86b6f26a121f47a2ae60ab534af78c26c18") Trader Joe] instead of Pangolin. We have switched exchanges per community request.
               +get-started-step(4).
                 Connect your wallet + create your nodes on our #[+inline-link("http://app.emeraldnodes.finance")(data-hide-until-nodes-launch) Nodes App]#[span(data-show-until-nodes-launch) Nodes App]!
               +get-started-step(5).
